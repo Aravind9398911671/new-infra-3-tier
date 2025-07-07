@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = "my-bucket"
+  bucket = "my-bucket-aravind-20250707" 
+
   tags = {
     Environment = "Dev"
   }
@@ -12,4 +13,3 @@ resource "aws_s3_bucket_versioning" "example" {
     status = "Enabled"
   }
 }
-
