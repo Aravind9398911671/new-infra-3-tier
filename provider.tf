@@ -1,13 +1,9 @@
 provider "aws" {
-  region = "ap-south-1"
+  region  = var.region
+  profile = "default"  # or whatever profile you're using
 }
 
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "5.84.0"
-    }
-  }
+variable "region" {
+  description = "AWS region"
+  default     = "ap-south-1"
 }
-
